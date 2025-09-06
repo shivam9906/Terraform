@@ -40,7 +40,7 @@ resource "aws_security_group" "instance" {
 
 # Create an EC2 instance
 resource "aws_instance" "myinstance" {
-  ami                    = "ami-0861f4e788f5069dd" #for mumbai region ubuntu server 
+  ami                    = "ami-02d26659fd82cf299" #for mumbai region ubuntu server 
   instance_type          = "t2.micro"
   vpc_security_group_ids = ["${aws_security_group.instance.id}"]
   key_name               = "Jenkins_Key"
