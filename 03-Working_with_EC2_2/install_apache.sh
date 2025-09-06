@@ -1,5 +1,6 @@
 #!/bin/bash
-yum install httpd -y
+yum install apache2
 cd /var/www/html
 echo "Created using Terraform" >> index.html
-service httpd start
+service apache2 start
+systemctl enable apache2
